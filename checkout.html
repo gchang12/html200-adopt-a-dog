@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
   <meta charset="UTF-8" >
   <!-- Code forked from: https://github.com/UWFront-End-Cert/html200-adopt-a-dog -->
@@ -11,18 +11,18 @@
 
   <header>
     <div class="title-text">
-      <h1>Adoptadog</h1>
+      <!-- <h1>Adoptadog</h1> -->
       <h2>Seattle's premiere dog adoption agency</h2>
     </div>
     <div class="checkout-display">
       <div class="cart-info">
-        <div class="cart-icon">
-        </div>
+        <div class="cart-icon"></div>
         <span class="cart-amount">
+          $1234.56
         </span>
       </div>
-      <button type="button">Checkout</button>
     </div>
+    <button type="button">Checkout</button>
   </header>
 
   <nav>
@@ -34,29 +34,83 @@
   </nav>
 
   <main>
-    <section>
+    <section class="checkout">
       <h2>Checkout</h2>
       <form>
-        <input type="text" >
-        <input type="email" >
-        <input type="address" >
-        <input type="city" >
-        <input type="state" >
-        <input type="zip-code" >
-        <input type="boolean" >
-        <input type="pickup-location" >
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" >
+        </div>
+        <div class="form-field">
+          <label for="email-address">Email Address</label>
+          <input type="email" id="email-address" name="email-address" >
+        </div>
+        <div class="form-field">
+          <label for="street-address">Street Address</label>
+          <input type="text" id="street-address" name="street-address" >
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" >
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" >
+          <label for="zip-code">Zip Code</label>
+          <input type="tel" id="zip-code" name="zip-code" >
+        </div>
+        <fieldset>
+          <legend>First Time Adopter?</legend>
+          <div class="form-field">
+            <label for="first-time-adopter-yes">Yes</label>
+            <input type="radio" id="first-time-adopter-yes" name="first-time-adopter" >
+          </div>
+          <div class="form-field">
+            <label for="first-time-adopter-no">No</label>
+            <input type="radio" id="first-time-adopter-no" name="first-time-adopter" >
+          </div>
+        </fieldset>
+        <div class="form-field">
+          <label for="pickup-location">Pickup Location</label>
+          <select id="pickup-location" name="pickup-location">
+            <option value="" label="pickup-location"> </option>
+          </select>
+        </div>
+        <section class="checkout">
+          <h3>Dogs Adopted</h3>
+          <ul>
+            <li class="checkout-item">
+              <img alt="Lucas looking hopefully up" src="./images/lucas-checkout.jpg" >
+              <div class="checkout-info">
+                <h4>Lucas</h4>
+                <dl>
+                  <dt>Cost to Adopt</dt>
+                  <dd>$123.45</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="checkout-item">
+              <img alt="Duffy squinting at fourth wall" src="./images/duffy-checkout.jpg" >
+              <div class="checkout-info">
+                <h4>Duffy</h4>
+                <dl>
+                  <dt>Cost to Adopt</dt>
+                  <dd>$123.45</dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Total Adoption Cost</h3>
+          <span class="total">$1234.56</span>
+        </section>
+        <button type="button">Submit</button>
       </form>
     </section>
   </main>
 
   <footer>
     <div class="title-text">
-      <h2>Adoptadog</h2>
+      <!-- <h2>Adoptadog</h2> -->
     </div>
-    <p>
-      Aborpos nisto inci tet aut que volupti beruptiberro to ex
-      esseque invenienihil imaximu scideru ptistiusam consequunt
-    </p>
+    <p>Aborpos nisto inci tet aut que volupti beruptiberro to ex esseque invenienihil imaximu scideru ptistiusam consequunt</p>
     <nav>
       <ul>
         <li><a href="./index.html">Home</a></li>
