@@ -196,4 +196,17 @@
   </footer>
 
 </body>
+
+<!-- NOTE: For debugging purposes; comment-out in production. -->
+
+<script>
+  for (const button of document.body.querySelectorAll("button")) {
+    button.addEventListener("click", (event) => {
+      alert(event.target.innerText);
+    });
+  };
+</script>
+
+<!-- -->
+
 </html>
