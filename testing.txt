@@ -1,3 +1,12 @@
+
+PROMPT
+======
+Add a testing.txt file to your repository to include your research on users and devices, and testing steps you took to ensure site quality.
+Test your course project on:
+    At least 3 different browsers
+    On a different operating system if you can (PC if you have a Mac, and vice versa)
+    On a tablet and or phone.
+
 TODO
 ====
 Test on Edge
@@ -85,3 +94,18 @@ Samsung Galaxy A16 5G
 2. Open each page and check that each button can be clicked on.
 3. Check that clicking on each button causes an alert pop-up to display the name of the button clicked.
 4. Repeat step 2 for all pages.
+
+Microsoft Edge
+--------------
+1. Open the `Developer tools`; navigate the following path.
+    1. `More tools`
+    2. `Developer tools`
+*Alternatively, access it using the keyboard shortcut `Ctrl-Shift-I`.*
+2. Open the GUI that allows you to toggle virtual devices.
+    - In the upper-left corner of the `Developer tools`, there should be two icons; select the one second from the left.
+*Alternatively, use the keyboard shortcut `Ctrl-Shift-M`.*
+3. In the virtual device previewer, test visibility of elements as before on different devices.
+    - Rotate virtual device as desired. 
+    - Enable touch gestures to scroll through virtual viewport.
+4. Toggle the `vision deficiency emulation` widget to various options as needed.
+    - Assess if any references to color should be made, and revise as necessary.
