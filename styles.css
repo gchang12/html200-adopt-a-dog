@@ -1,0 +1,16 @@
+/* Week 03 - Assignment Prompt
+In Lesson 1, you started your Course Project Assignment. You have already written the HTML for your course project. In this lesson, apply CSS to your course project to match the PDF mockups.
+As you work on your portfolio project directory adding CSS for this assignment keep in mind all CSS should be responsive. As we start, we are not concerned if the site looks perfect on mobile or tablet devices. We'll learn more techniques later on. For now, we just want to start working on responsiveness. Following the ideas mentioned in the first part of this course.
+To submit your assignment
+    In GitHub, make a pull request.
+    Click the blue Submit Assignment button on this page.
+    Submit 3 links for this assignment in the text box:
+        A link to your GitHub repository
+        A link to your GitHub pages
+        A link to the pull request
+    Click the Submit Assignment button again to turn in your assignment.
+*/
+
+body {
+  /* background-color: black; */
+}
