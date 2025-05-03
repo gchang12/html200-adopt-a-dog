@@ -11,6 +11,154 @@ To submit your assignment
     Click the Submit Assignment button again to turn in your assignment.
 */
 
+/* GLOBAL */
+
+:root {
+  --content-margin: 10rem;
+  --inner-content-margin: calc(var(--content-margin) + 4rem);
+}
+
 body {
-  /* background-color: black; */
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
+
+.embeds-img {
+  display: block;
+}
+
+/* HEADER */
+
+header {
+  background-color: #093c60;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem var(--content-margin);
+  color: white;
+  padding-bottom: 3rem;
+}
+
+h1 {
+  color: #81b741;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.checkout {
+  /* width: 10rem; */
+}
+
+.cart {
+  display: flex;
+  justify-content: end;
+  height: 3rem;
+  padding-left: 2rem;
+}
+
+.cart > img {
+  margin-right: 0.5rem;
+}
+
+.amount {
+  display: flex;
+  /* justify-content: end; */
+  align-items: center;
+}
+
+.checkout > button {
+  margin-top: 0.5rem;
+  background-color: #81b741;
+  color: inherit;
+  width: 100%;
+  height: 2rem;
+}
+
+/* NAVIGATION */
+
+nav {
+  background-color: #ececec;
+  padding: 0 var(--inner-content-margin);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+nav > ul {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  padding-left: 0;
+  justify-content: space-between;
+  width: 10rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #093c60;
+}
+
+/* MAIN */
+
+main {
+  padding: 0 var(--inner-content-margin);
+  color: #3d3d3d;
+}
+
+.picture-and-text {
+  display: flex;
+  margin: 1.5rem 0;
+}
+
+.picture-and-text > article {
+  margin: 1rem;
+  margin-top: 0rem;
+}
+
+main img {
+  align-self: start;
+}
+
+h2 {
+  color: #093c60;
+}
+
+.field-label {
+  font-weight: bold;
+}
+
+.field-label::after {
+  content: ": ";
+}
+
+#adoption-listings {
+  display: flex;
+  /* flex-wrap: row; */
+  /* flex-basis: 25%; */
+}
+
+#adoption-listings > article > img {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+}
+
+#adoption-listings > article {
+  border: 1px solid #ededed;
+}
+
+#adoption-listings button {
+  background-color: #81b741;
+  color: white;
 }
