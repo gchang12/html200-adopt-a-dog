@@ -134,6 +134,7 @@ main {
   margin-top: 0rem;
   /* padding-right: 5rem; */
   /* padding-right: var(--inner-content-margin); */
+  width: 800px;
 }
 
 main img {
@@ -235,4 +236,27 @@ footer img {
 
 .copyright::after {
   content: " | ";
+}
+
+/* MAIN::BLOGS */
+
+.blog > h2 {
+  margin: 3rem 0;
+}
+
+.blog > article {
+  display: flex;
+  margin-bottom: 5rem;
+  margin-left: 2rem;
+}
+
+.article-text {
+  margin-left: 3rem;
+  /* padding-right: 100px; */
+  width: 700px;
+}
+
+.article-text > h3 {
+  margin: 0;
+  color: #093c60;
 }
