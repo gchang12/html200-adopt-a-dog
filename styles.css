@@ -93,6 +93,7 @@ nav {
   height: 3rem;
   display: flex;
   align-items: center;
+  font-weight: bold;
 }
 
 nav > ul {
@@ -101,7 +102,11 @@ nav > ul {
   display: flex;
   padding-left: 0;
   justify-content: space-between;
-  width: 10rem;
+  width: 11rem;
+}
+
+nav > ul > li + li::before {
+  content: "/ ";
 }
 
 nav a {
@@ -114,6 +119,9 @@ nav a {
 main {
   padding: 0 var(--inner-content-margin);
   color: #3d3d3d;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
 }
 
 .picture-and-text {
@@ -124,6 +132,8 @@ main {
 .picture-and-text > article {
   margin: 1rem;
   margin-top: 0rem;
+  /* padding-right: 5rem; */
+  /* padding-right: var(--inner-content-margin); */
 }
 
 main img {
@@ -144,21 +154,85 @@ h2 {
 
 #adoption-listings {
   display: flex;
-  /* flex-wrap: row; */
+  flex-wrap: wrap;
   /* flex-basis: 25%; */
 }
 
 #adoption-listings > article > img {
-  width: 200px;
-  height: 100px;
+  width: 100%;
+  height: 150px;
   object-fit: cover;
 }
 
 #adoption-listings > article {
   border: 1px solid #ededed;
+  /* width: 400px; */
+  width: 300px;
+  margin: 2rem;
+  /* padding: 1rem; */
+}
+
+/* #adoption-listings > article:first-child { border: 3px solid red; } */
+
+.adoption-card {
+  padding: 1rem;
 }
 
 #adoption-listings button {
   background-color: #81b741;
   color: white;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+#adoption-listings h2 {
+  margin: 0;
+}
+
+main > button {
+  background-color: #ececec;
+  color: #093c60;
+  width: 30rem;
+  /* width: 100%; */
+  height: 3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #3d3d3d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 5rem;
+}
+
+footer nav {
+  background-color: inherit;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: inherit;
+}
+
+footer p {
+  width: 30%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+footer img {
+  width: 25rem;
+}
+
+.copyright::after {
+  content: " | ";
 }
