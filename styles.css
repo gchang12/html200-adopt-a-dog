@@ -263,18 +263,29 @@ textarea {
   margin-bottom: 3rem;
 }
 
-.form-field > label {
+fieldset > legend, .form-field > label {
   color: #093c60;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.form-field > input, select {
+#first-time-adopter-yes, #first-time-adopter-no {
+  color: revert;
+  font-weight: revert;
+}
+
+textarea, .form-field > input, select {
   border: 3px solid #ededed;
   border-radius: 2px;
   height: 3rem;
   width: 40rem;
   background-color: white;
+}
+
+textarea {
+  resize: none;
+  height: revert;
+  width: revert;
 }
 
 fieldset {
@@ -283,14 +294,16 @@ fieldset {
   height: 5rem;
   justify-content: space-around;
   margin: 3rem 0;
+  border-width: 0;
 }
 
 fieldset .form-field {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 fieldset .form-field input {
   width: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .multifield {
@@ -311,6 +324,10 @@ fieldset .form-field input {
 
 .multifield > * {
   margin-bottom: 0;
+}
+
+.multifield .form-field > input, select {
+  margin-top: 1rem;
 }
 
 #street-address {
@@ -380,11 +397,17 @@ dt {
   font-size: 2rem;
 }
 
-#adoption-cost > button {
+.submit {
   margin-top: 2rem;
   background-color: #81b741;
   color: white;
   font-weight: bold;
   width: 100%;
   height: 4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
