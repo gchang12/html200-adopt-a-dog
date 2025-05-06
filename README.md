@@ -1,3 +1,5 @@
+[LIVE PAGE HERE](https://gchang12.github.io/html200-adopt-a-dog/)
+
 ADOPT-A-DOG
 ===========
 Adopt-a-Dog is a dog adoption agency based in Seattle. As so many of our fellow citizens are so tech-savvy these days, we have decided to make ourselves known to prospective dog owners by putting ourselves out there on the Web! This website is an interface whereby people of all demographics can browse through our virtual shelter, elect candidates for adoption, and even post about our pet experiences for all to share in the love of canines! All dog-lovers are welcome!
