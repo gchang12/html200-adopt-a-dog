@@ -232,6 +232,13 @@ footer img {
   margin-left: 2rem;
 }
 
+.article-text > button {
+  background-color: #093c60;
+  color: white;
+  height: 2rem;
+  width: 10rem;
+}
+
 .article-text {
   margin-left: 3rem;
   /* padding-right: 100px; */

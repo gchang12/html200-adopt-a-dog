@@ -1,7 +1,6 @@
 /*
 TODO: Add data-* attributes to these elements.
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*
-
 Create click handlers that alerts the dog’s information when clicking on the dog’s photo.
 You will need to pass in the params in the click handler of the dog’s:
 - name
@@ -46,16 +45,102 @@ for (const button of document.body.querySelectorAll("#adoption-listings button")
   button.addEventListener("click", incrementAmount);
 }
 
-function printFormData(e) {
-  const contactForm = document.getElementById("contact-form");
+function printFormData() {
+  /* const contactForm = document.getElementById("contact-form"); */
   const formData = {};
+  for (const input of document.body.querySelectorAll("#contact-form input")) {
+    formData[input.id] = input.value;
+  };
+  formData.message = document.body.querySelector("#contact-form textarea").value;
+  console.log(formData);
   alert("Thank you. The form information has been received");
-  console.log(formData.toString());
 }
 
-const contactForm = document.getElementById("contact-form");
-contactForm.addEventListener("submit", printFormData);
+for (const contactSubmit of document.body.querySelectorAll("#contact-form > button")) {
+  contactSubmit.addEventListener("click", printFormData);
+}
 
+function generateBlogEntry(imgSrc, imgAlt, headerText) {
+  /* Create elements. */
+  const article = document.createElement("article");
+  const img = document.createElement("img");
+  img.setAttribute("src", imgSrc);
+  img.setAttribute("alt", imgAlt);
+  const articleText = document.createElement("div");
+  articleText.className = "article-text";
+  const h3 = document.createElement("h3");
+  h3.textContent = headerText;
+  const para1 = document.createElement("p");
+  para1.textContent = "Iduciendisite quo magnatem iuntum quid quaest ea am, tenderumet adis dolenem quidustrum fuga. Faceaquae estioria derum recuptatur, cum volore, undipsa doloreium hillupta aut es ut alitatuscit ommossum haritatur arum qui officae videbiti corporeium faccull oribus es quidignis ipietus explam sus am aut amet ant fugiatum, utem non reptat.";
+  const para2 = document.createElement("p");
+  para2.textContent = "Uptiusd andesci qui nem aut vendion ectur? Debis que explaut laborenia que doluptur, con et labor abor sant poreperum dio quat que doluptatur aut voluptassim quisciatquam ea ad qui con nes cus esere dolut hicto teni solutenis alit ulparume nonseca estorer spernam voluptassim quisciatquam ea ad qui con nes cus esere dolut hicto teni solutenis alit ulparume nonseca estorer spernam.";
+  const button = document.createElement("button");
+  button.className = "cycler";
+  button.setAttribute("type", "button");
+  button.textContent = "Next Entry";
+  /* Begin appending here. */
+  article.appendChild(img);
+  articleText.appendChild(h3);
+  articleText.appendChild(para1);
+  articleText.appendChild(para2);
+  articleText.appendChild(button);
+  article.appendChild(articleText);
+  document.body.querySelector(".blog").replaceChild(
+    article,
+    document.querySelector(".blog > article"),
+  );
+  for (const cyclerButton of document.body.querySelectorAll(".cycler")) {
+    cyclerButton.addEventListener("click", cycleThroughBlog);
+  };
+}
+
+const blogEntries = [
+  {
+    "imgSrc": "images/blog-1.jpg",
+    "imgAlt": "Girl sitting in canyon with black dog",
+    "headerText": "Traveling With Your Dog",
+  },
+  {
+    "imgSrc": "images/blog-2.jpg",
+    "imgAlt": "Four dogs bound by leashes",
+    "headerText": "How to Walk Multiple Dogs",
+  },
+  {
+    "imgSrc": "images/blog-3.jpg",
+    "imgAlt": "Girl playing fetch with dog near sundown",
+    "headerText": "Teach Your Dog to Fetch!",
+  },
+];
+
+let blogCounter = 0;
+
+function cycleThroughBlog() {
+  blogCounter += 1;
+  const blogEntry = blogEntries[blogCounter % 3];
+  generateBlogEntry(blogEntry.imgSrc, blogEntry.imgAlt, blogEntry.headerText);
+}
+
+for (const cyclerButton of document.body.querySelectorAll(".cycler")) {
+  cyclerButton.addEventListener("click", cycleThroughBlog);
+}
+
+/*
+getElementById
+getElementByTagName
+getElementByClassName
+querySelector
+querySelectorAll
+innerHTML
+textContent
+classList
+getAttribute
+setAttribute
+createElement
+appendChild
+insertBefore
+replaceChild
+removeChild
+*/
 
 /*
 Refactor Blog Page
@@ -83,3 +168,4 @@ Blog posts are generated via JavaScript.
 An alert displays when the form has been submitted successfully.
 The results of the form submission are console logged.
 */
+
